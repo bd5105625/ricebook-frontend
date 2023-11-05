@@ -10,10 +10,13 @@ COPY package*.json ./
 # Install only production dependencies
 RUN npm install --omit=dev
 
+RUN npm install --global serve
+RUN npm run build
+
 COPY . /app
 
 # Expose the listening port
 EXPOSE 3000
 
 # Run the app
-CMD ["npm", "start"]
+CMD ["serve", "-s", "build"]
