@@ -1,6 +1,6 @@
 import React from "react";
 import { Label} from "flowbite-react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // import {UserList, UserNameList} from '../main/follower'
 import { useDispatch } from "react-redux";
@@ -134,7 +134,7 @@ export const LoginForm = ({setIsLoading, setStatus}) => {
 
                 <div className="flex flex-col justify-center">
 
-                    <button className="rounded-full bg-gray-0 sm:w-auto text-center text-base tracking-tight text-gray-500" onClick={() => setInstruction(!instruction)}>- Instruction -</button>
+                    <Link className="rounded-full bg-gray-0 sm:w-auto text-center text-base tracking-tight text-gray-500" onClick={() => setInstruction(!instruction)}>- Instruction -</Link>
                     { instruction && <p className="mt-2 text-center text-sm tracking-tight text-gray-500">Default username-password for testing</p> }
 
                 </div>
