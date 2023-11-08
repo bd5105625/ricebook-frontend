@@ -1,6 +1,6 @@
 # "netid": "kl108"
-# "frontend" : "http://brad_ricebook.surge.sh"
-# "backend" : "https://finalwebbrad.herokuapp.com"
+# "frontend" : "https://ricebook-brad.surge.sh"
+# "backend" : "https://ricebook-backend-65d6f66f731f.herokuapp.com"
 # Test:
 # username: Brad
 # password: 1234
