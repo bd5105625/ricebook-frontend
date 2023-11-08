@@ -15,9 +15,11 @@ import {information} from "../newuser";
 export const LoginForm = ({setIsLoading, setStatus}) => {
 
     const [formData, setFormData] = useState({
-        account: '',
-        password: '',
+        account: 'Brad',
+        password: '1234',
     })
+
+    const [instruction, setInstruction] = useState(false)
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -129,6 +131,13 @@ export const LoginForm = ({setIsLoading, setStatus}) => {
                         {/*</Link>*/}
                     </div>
                 </form>
+
+                <div className="flex flex-col justify-center">
+
+                    <button className="rounded-full bg-gray-0 sm:w-auto text-center text-base tracking-tight text-gray-500" onClick={() => setInstruction(!instruction)}>- Instruction -</button>
+                    { instruction && <p className="mt-2 text-center text-sm tracking-tight text-gray-500">Default username-password for testing</p> }
+
+                </div>
             </div>
         </div>
     )
